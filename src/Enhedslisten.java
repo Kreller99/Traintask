@@ -6,18 +6,21 @@ abstract class Enhedslisten {
     boolean[] signals = new boolean[6];
     boolean[] switches = new boolean[2];
 
-     public boolean signal(boolean tr2, boolean tr3, boolean s2, boolean sw1){
+     public void signal(boolean tr2, boolean tr3, boolean s1, boolean sw1){
          if(tr2 == false || tr3 == false){
              if(tr2 == false){
                  sw1 = true;
-                 s2 = true;
+                 s1 = true;
              }
              else{
-                 s2 = false;
-
+                 sw1 = false;
+                 s1 = true;
              }
-
+         }
+         else{
+             s1 = false;
          }
      }
+
 
 }
